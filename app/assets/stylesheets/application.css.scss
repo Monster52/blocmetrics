@@ -16,3 +16,33 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ .navbar {
+   margin-bottom: 0px;
+ }
+
+ .jumbotron {
+   background-image: url(coffee.jpg);
+   height: 100vh;
+   -webkit-background-size: 100% 100%;
+   -moz-background-size: 100% 100%;
+   -o-background-size: 100% 100%;
+   background-size: 100% 100%;
+   margin-top: -30px;
+ }
+
+ .jumbotron h2 {
+   background-color: orange;
+   padding-left: 20px;
+   font-family: 'Roboto Condensed', sans-serif;
+ }
+
+//---------Applications Index---------//
+ .down {
+   margin-top: 50px;
+ }
+
+ //----------Show Application----------//
+ .side-bar {
+   height: 100vh;
+ }

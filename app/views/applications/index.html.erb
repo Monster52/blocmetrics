@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row down">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= current_user.email %> applications</h3>
+      </div>
+
+      <% @applications.each do |application| %>
+
+        <div class="panel-body">
+          <div class="col-sm-6">
+            <h4><%= link_to application.url, application %></h4>
+          </div>
+          <div class="col-sm-6 text-right">
+            <%= link_to 'Edit', edit_application_path(application), class: 'btn btn-success'%>
+            <%= link_to 'Delete', application, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
