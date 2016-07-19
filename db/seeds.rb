@@ -1,5 +1,7 @@
 require 'faker'
 
+event_names = ['users', 'page views']
+
 # Create Users
 10.times do
   User.create!(
@@ -21,3 +23,23 @@ unless User.find_by(email: "admin@email.com")
 else
   puts "Skipped creation of \"admin@email.com\""
 end
+
+# Create Applications
+30.times do
+  Application.create!(
+    url: Faker::Internet.url,
+    user: users.sample
+  )
+end
+applications = Application.all
+puts "#{Application.count} applications created."
+
+# Create Events
+1000.times do
+  Event.create!(
+    name: event_names.sample,
+    application: applications.sample
+  )
+end
+events = Event.all
+puts "#{Event.count} events created."

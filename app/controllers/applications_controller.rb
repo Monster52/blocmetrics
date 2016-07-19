@@ -1,10 +1,12 @@
 class ApplicationsController < ApplicationController
+
   def index
     @applications = Application.all
   end
 
   def show
     @application = Application.find(params[:id])
+    @events = @application.events.group_by(&:name)
   end
 
   def new

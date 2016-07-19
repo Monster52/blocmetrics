@@ -14,8 +14,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", applications_path %></li>
-        <li><%= link_to "Reporting", @application %></li> <!-- Find current application or first application in list -->
+        <li><%= link_to "Reporting", :back %></li> <!-- use JS to capture last app link clicked and return to it. -->
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
