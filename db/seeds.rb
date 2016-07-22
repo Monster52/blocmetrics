@@ -1,6 +1,6 @@
 require 'faker'
 
-event_names = ['users', 'page views']
+event_names = ['users', 'page visits']
 
 # Create Users
 10.times do
