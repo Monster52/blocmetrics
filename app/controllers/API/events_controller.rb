@@ -1,4 +1,4 @@
-class API::EventsController < ApplicationController
+class Api::EventsController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_filter :set_access_control_headers
 
