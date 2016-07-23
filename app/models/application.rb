@@ -8,6 +8,6 @@ class Application < ActiveRecord::Base
   end
 
   def page_views_count
-    self.events.where(name: "page views").count
+    self.events.where(name: "page visit").count
   end
 end
