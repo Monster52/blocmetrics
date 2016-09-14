@@ -13,12 +13,13 @@ gem 'pry'
 gem 'devise'
 gem 'chartkick'
 gem 'groupdate'
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.5.0'
   gem 'shoulda'
   gem 'faker'
   gem 'factory_girl_rails'
@@ -26,6 +27,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'web-console', '~> 2.0'
 end
 
 group :production do
